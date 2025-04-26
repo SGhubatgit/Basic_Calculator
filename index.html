@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beautiful Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h2>Basic Calculator</h2>
+    <label for="input1">Enter your value 1:</label>
+    <input id="input1" type="number" placeholder="Enter your value 1" />
+    <label for="input2">Enter your value 2:</label>
+    <input id="input2" type="number" placeholder="Enter your value 2" />
+
+    <div class="button-group">
+      <button onclick="addtion()">Addition</button>
+      <button onclick="substraction()">Subtraction</button>
+      <button onclick="Multiplication()">Multiplication</button>
+      <button onclick="division()">Division</button>
+      <button onclick="exponent()">Exponent</button>
+    </div>
+
+    <p id="cal"></p>
+
+    <hr />
+
+    <h2>Sqrt / Double Calculator</h2>
+    <label for="input3">Enter a number:</label>
+    <input id="input3" type="number" placeholder="Enter a number" />
+
+    <div class="button-group">
+      <button onclick="double()">Double</button>
+      <button onclick="Squareroot()">Square Root</button>
+    </div>
+
+    <p id="calc"></p>
+  </div>
+
+  <script>
+    function addtion() {
+      let a = document.getElementById("input1").value;
+      let b = document.getElementById("input2").value;
+      let c = Number(a) + Number(b);
+      document.getElementById("cal").innerText = "The answer is: " + c;
+    }
+
+    function substraction() {
+      let a = document.getElementById("input1").value;
+      let b = document.getElementById("input2").value;
+      let c = Number(a) - Number(b);
+      document.getElementById("cal").innerText = "The answer is: " + c;
+    }
+
+    function Multiplication() {
+      let a = document.getElementById("input1").value;
+      let b = document.getElementById("input2").value;
+      let c = Number(a) * Number(b);
+      document.getElementById("cal").innerText = "The answer is: " + c;
+    }
+
+    function division() {
+      let a = document.getElementById("input1").value;
+      let b = document.getElementById("input2").value;
+      let c = Number(a) / Number(b);
+      document.getElementById("cal").innerText = "The answer is: " + c;
+    }
+
+    function exponent() {
+      let a = document.getElementById("input1").value;
+      let b = document.getElementById("input2").value;
+      let c = Math.pow(Number(a), Number(b));
+      document.getElementById("cal").innerText = "The answer is: " + c;
+    }
+
+    function Squareroot() {
+      let a = document.getElementById("input3").value;
+      let c = Math.sqrt(Number(a));
+      document.getElementById("calc").innerText = "The answer is: " + c;
+    }
+
+    function double() {
+      let a = document.getElementById("input3").value;
+      let c = Math.pow(Number(a), 2);
+      document.getElementById("calc").innerText = "The answer is: " + c;
+    }
+  </script>
+</body>
+
+</html>
